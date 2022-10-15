@@ -9,8 +9,5 @@ public sealed class QueueExampleFunctionDev : QueueExampleFunction
     [QueueOutput(Constants.QueueNames.OutputQueue, Connection = Constants.ConnectionStrings.AzureWebJobsStorage)]
     public override string QueueExample(
         [QueueTrigger(Constants.QueueNames.InputQueue, Connection = Constants.ConnectionStrings.AzureWebJobsStorage)]string myQueueItem, 
-        FunctionContext context)
-    {
-        return base.QueueExample(myQueueItem, context);
-    }
+        FunctionContext context) => base.QueueExample(myQueueItem, context);
 }
