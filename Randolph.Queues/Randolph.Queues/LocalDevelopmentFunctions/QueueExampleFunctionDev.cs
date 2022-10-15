@@ -3,7 +3,7 @@ using Randolph.Queues.Functions;
 
 namespace Randolph.Queues.LocalDevelopmentFunctions;
 
-public class QueueExampleFunctionDev : QueueExampleFunction
+public sealed class QueueExampleFunctionDev : QueueExampleFunction
 {
     [Function(nameof(QueueExample) + Constants.FunctionNameSuffixes.LocalDevelopment)]
     [QueueOutput(Constants.QueueNames.OutputQueue, Connection = Constants.ConnectionStrings.AzureWebJobsStorage)]
